@@ -127,7 +127,7 @@ enum class PolarityConfig : uint8_t
 };
 
 CDI_GROUP_ENTRY(mode, openlcb::Uint8ConfigEntry,    //
-    Default((uint8_t)ActionConfig::DOUTPUT),        //
+    Default((uint8_t)ActionConfig::DINPUT),         //
     MapValues(PC_MODE_MAP),                         //
     Name("Mode"),                                   //
     Description("This controls how the pin is configured."));
