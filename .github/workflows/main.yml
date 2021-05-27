@@ -1,0 +1,35 @@
+name: Build
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Build
+        uses: georgik/esp-idf-ci-action@branch-release-v4.3
+        with:
+          path: firmware
+      - name: Prepare Binaries
+        run: |
+          mkdir -p binaries
+          cp firmware/build/ESP32C3OlcbIO.bin binaries
+          cp firmware/build/partition_table/partition-table.bin binaries
+          cp firmware/build/ota_data_initial.bin binaries
+          cp firmware/build/bootloader/bootloader.bin binaries
+      - name: Package binaries
+        uses: actions/upload-artifact@v1
+        with:
+          path: binaries
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
