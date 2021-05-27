@@ -31,7 +31,7 @@ jobs:
       - name: Package binaries
         uses: actions/upload-artifact@v1
         with:
-          name: Esp32OlcbIO
+          name: Esp32C3OlcbIO
           path: binaries
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
