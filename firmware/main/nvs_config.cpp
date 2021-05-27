@@ -157,7 +157,8 @@ void nvs_init()
     // internally used by various components even if we disable it's usage in
     // the WiFi connection stack.
     LOG(INFO, "[NVS] Initializing NVS");
-    if (ESP_ERROR_CHECK_WITHOUT_ABORT(nvs_flash_init()) == ESP_ERR_NVS_NO_FREE_PAGES)
+    esp_err_t res = ESP_ERROR_CHECK_WITHOUT_ABORT(nvs_flash_init());
+    if (res == ESP_ERR_NVS_NO_FREE_PAGES)
     {
         const esp_partition_t *part =
             esp_partition_find_first(ESP_PARTITION_TYPE_DATA
@@ -174,7 +175,7 @@ void nvs_init()
             diewith(NVS_BLINK_VFS_FAILED);
         }
     }
-    else
+    else if (res != ESP_OK)
     {
         LOG_ERROR("[NVS] Unable to locate NVS partition!");
         diewith(NVS_BLINK_VFS_FAILED);
