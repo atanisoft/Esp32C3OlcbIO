@@ -23,6 +23,7 @@ jobs:
       - name: Prepare Binaries
         run: |
           mkdir -p binaries
+          cp .github/firmwarereadme.txt binaries/readme.txt
           cp firmware/build/ESP32C3OlcbIO.bin binaries
           cp firmware/build/partition_table/partition-table.bin binaries
           cp firmware/build/ota_data_initial.bin binaries
@@ -30,6 +31,7 @@ jobs:
       - name: Package binaries
         uses: actions/upload-artifact@v1
         with:
+          name: Esp32OlcbIO
           path: binaries
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
