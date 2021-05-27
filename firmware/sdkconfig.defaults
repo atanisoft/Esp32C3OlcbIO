@@ -1,0 +1,70 @@
+#
+# SDK configuration
+#
+CONFIG_IDF_TARGET_ESP32C3=y
+CONFIG_IDF_TARGET="esp32c3"
+CONFIG_ESP32C3_REV_MIN_2=y
+
+#
+# Bootloader config
+#
+CONFIG_BOOTLOADER_LOG_LEVEL_WARN=y
+
+#
+# Partition Table
+#
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="esp32c3olcbio-partitions.csv"
+
+#
+# Log output
+#
+CONFIG_LOG_DEFAULT_LEVEL_WARN=y
+CONFIG_LOG_COLORS=n
+
+#
+# Compiler options
+#
+
+#
+# ESP32C3-Specific
+#
+CONFIG_ESP32C3_DEBUG_OCDAWARE=n
+
+#
+# Common ESP-related
+#
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+
+#
+# FreeRTOS configuration
+#
+CONFIG_FREERTOS_HZ=1000
+CONFIG_FREERTOS_DEBUG_OCDAWARE=n
+CONFIG_ESP32C3_NO_BLOBS=y
+
+#
+# Ethernet
+#
+CONFIG_ETH_ENABLED=n
+CONFIG_ETH_USE_SPI_ETHERNET=n
+
+#
+# Watchdog configuration
+#
+CONFIG_ESP_TASK_WDT=n
+
+#
+# Serial flasher config
+#
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+#
+# SPIFFS Configuration
+#
+CONFIG_SPIFFS_MAX_PARTITIONS=1
+
+#
+# Virtual file system
+#
+CONFIG_VFS_SUPPORT_TERMIOS=n

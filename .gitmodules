@@ -1,0 +1,3 @@
+[submodule "firmware/components/OpenMRNIDF"]
+	path = firmware/components/OpenMRNIDF
+	url = https://github.com/atanisoft/OpenMRNIDF.git
