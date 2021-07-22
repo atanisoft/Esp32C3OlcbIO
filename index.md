@@ -1,5 +1,6 @@
 # What is the Esp32C3OlcbIO
 Esp32C3OlcbIO is a compact OpenLCB (LCC) IO node offering eight integrated IO pins and both 3v3 and 5v I2C connections for expansion.
+![Esp32C3OlcbIO.png](Esp32C3OlcbIO.png "Rendered PCB image")
 
 ## Features
 
