@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+---
+layout: default
+---
 
-You can use the [editor on GitHub](https://github.com/atanisoft/Esp32C3OlcbIO/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# What is the Esp32C3OlcbIO
+Esp32C3OlcbIO is a compact OpenLCB (LCC) IO node offering eight integrated IO pins and both 3v3 and 5v I2C connections for expansion.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Features
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/atanisoft/Esp32C3OlcbIO/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+* Compact size (approximately 81x40mm)
+* Powered by the OpenLCB (LCC) bus, drawing up to 50mA of current.
+* Integrated 3v3 and 5v I2C bus support.
+* Firmware update over USB or OpenLCB (LCC).
+* 2x5 IDC header for on-board 5v IO.
+* Qwiic connector for expansion (3v3 I2C).
+* Grove connector for expansion (5v I2C).
+* 2.54mm pitch 1x4 connector for expansion (5v I2C).
